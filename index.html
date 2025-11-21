@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Compare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Code Compare</h1>
+        <div class="controls">
+            <select id="language-select">
+                <option value="plaintext">Free Mode</option>
+                <option value="csharp" selected>C#</option>
+                <option value="cpp">C++</option>
+                <option value="c">C</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="typescript">TypeScript</option>
+                <option value="go">Go</option>
+                <option value="rust">Rust</option>
+                <option value="php">PHP</option>
+                <option value="ruby">Ruby</option>
+                <option value="swift">Swift</option>
+                <option value="kotlin">Kotlin</option>
+                <option value="sql">SQL</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="json">JSON</option>
+                <option value="xml">XML</option>
+                <option value="yaml">YAML</option>
+                <option value="markdown">Markdown</option>
+                <option value="shell">Shell/Bash</option>
+                <option value="powershell">PowerShell</option>
+            </select>
+            <div class="font-size-control">
+                <span>Font:</span>
+                <button id="font-decrease">-</button>
+                <span id="font-size-value">14</span>
+                <button id="font-increase">+</button>
+            </div>
+            <button id="snapshot-btn">📷 Snapshot</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="pane incorrect">
+            <div class="pane-header">
+                <span class="label">❌ Incorrect</span>
+            </div>
+            <div id="editor-left" class="editor"></div>
+        </div>
+
+        <div class="pane correct">
+            <div class="pane-header">
+                <span class="label">✓ Correct</span>
+            </div>
+            <div id="editor-right" class="editor"></div>
+        </div>
+
+        <button class="vs-circle" id="compare-btn">VS</button>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
